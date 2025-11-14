@@ -1,0 +1,110 @@
+:root {
+  --box-size: 50px;
+  --gap: 6px;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    background: #fafafa; 
+}
+.page { 
+    max-width: 780px; 
+    margin: 0 auto; 
+}
+.controls { 
+    display: flex; 
+    gap: 8px; 
+    margin-bottom: 8px; 
+    align-items: center; 
+}
+.controls input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.controls button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background: #1976d2;
+    color: white;
+    cursor: pointer;
+}
+.controls button:active {
+    transform: translateY(1px);
+}
+.error { 
+    color: #a00; 
+    margin-top: 6px; 
+}
+
+.hint { 
+    color: #555; 
+}
+
+.cshape { 
+    margin-top: 18px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    align-items: flex-start; 
+}
+.top-row, .bottom-row { 
+    display: flex; 
+    gap: var(--gap); 
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+.middle-row { 
+    display: flex; 
+    gap: 12px; 
+    align-items: flex-start; 
+    width: 100%; 
+}
+.middle-col { 
+    display: flex; 
+    flex-direction: column; 
+    gap: var(--gap); 
+}
+.middle-filler { 
+    flex: 1; 
+}
+
+.grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: var(--gap); 
+}
+
+.box {
+    width: var(--box-size);
+    height: var(--box-size);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+}
+.box.red { 
+    background: #e74c3c; 
+}
+.box.green { 
+    background: #2ecc71; 
+}
+
+.footer-note { 
+    margin-top: 14px; 
+    color: #333; 
+    font-size: 13px; 
+}
+
+/* Responsive tweak */
+@media (max-width: 420px) {
+  :root { 
+    --box-size: 40px; 
+}
+}
